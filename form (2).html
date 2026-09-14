@@ -18,13 +18,7 @@
       <label>
         ФИО:<br />
         <input name="field-name-1"
-          placeholder="Чернов" />
-        <br />
-        <input name="field-name-1"
-          placeholder="Артём" />
-        <br />
-        <input name="field-name-1"
-          placeholder="Игоревич" />
+          placeholder="Чернов Артём Игоревич" />
       </label><br />
 
        <label>
@@ -51,7 +45,16 @@
       <label><input type="radio"
         name="radio-group-1" value="Значение2" />
         Женский</label><br />
-      
+      <label>
+        Список (listbox с множественным выбором):
+        <br />
+        <select name="field-name-4[]"
+          multiple="multiple">
+          <option value="Значение1">Метка1</option>
+          <option value="Значение2" selected="selected">Метка2</option>
+          <option value="Значение3" selected="selected">Метка3</option>
+        </select>
+      </label><br />
       <label>
         Многострочное текстовое поле:<br />
         <textarea name="field-name-2">начальное значение</textarea>
