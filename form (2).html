@@ -69,6 +69,12 @@
         </select>
       </label><br />
 
+      <form action="send.php" method="post">
+  <label for="phone">Телефон</label>
+  <input type="tel" id="phone" name="phone" pattern="\+7\s?\d{3}\s?\d{3}-\d{2}-\d{2}" placeholder="+7 900 000-00-00" required>
+  <input type="submit" value="Отправить">
+</form>
+
       <label>
         Список (listbox с множественным выбором):
         <br />
@@ -91,6 +97,8 @@
       отправятся в формате urlencoded методом
       POST или GET по адресу URL_отправки_данных:
       <input type="submit" value="Отправить" />
+
+      
     </form>
 
   </body>
