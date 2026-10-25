@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькулятор стоимости вашего заказа</title>
+    <title>Калькулятор стоимости услуги</title>
 
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
@@ -11,26 +11,54 @@
 
 <body>
     <main>
-        <h1>Калькулятор стоимости вашего заказа</h1>
+        <h1>Калькулятор стоимости услуги</h1>
 
-        <form id="order-form">
+        <form id="calculator">
             <p>
-                <label for="quantity">Кол-во товара:</label><br>
-                <input type="text" id="quantity" name="quantity">
+                <label for="quantity">Количество:</label><br>
+                <input type="number" id="quantity" min="1" value="1">
             </p>
 
-            <p>
-                <label for="product">Выберите товар:</label><br>
-                <select id="product" name="product">
-                    <option value="500">Футболка Оверсайз  490 руб</option>
-                    <option value="1000">Кроссовки Хайп  990 руб</option>
-                    <option value="1500">Чёрный Рюкзак   1490 руб</option>
-                </select>
-            </p>
+            <fieldset>
+                <legend>Выберите тип услуги:</legend>
 
-            <button type="button" id="calculate">Узнать стоимость :)</button>
+                <label>
+                    <input type="radio" name="service" value="1" checked>
+                    Обычная — 500 руб.
+                </label><br>
 
-            <p id="result"></p>
+                <label>
+                    <input type="radio" name="service" value="2">
+                    Расширенная — 1000 руб.
+                </label><br>
+
+                <label>
+                    <input type="radio" name="service" value="3">
+                    Премиум — 1500 руб.
+                </label>
+            </fieldset>
+
+            <div id="options-block">
+                <p>
+                    <label for="option">Дополнительная опция:</label><br>
+                    <select id="option">
+                        <option value="0">Без дополнения</option>
+                        <option value="200">Дополнение №1 — 200 руб.</option>
+                        <option value="400">Дополнение №2 — 400 руб.</option>
+                    </select>
+                </p>
+            </div>
+
+            <div id="property-block">
+                <p>
+                    <label>
+                        <input type="checkbox" id="property">
+                        Дополнительное свойство (+300 руб.)
+                    </label>
+                </p>
+            </div>
+
+            <p id="result">Стоимость: 500 руб.</p>
         </form>
     </main>
 </body>
